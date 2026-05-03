@@ -1,1 +1,4 @@
 # Maven\n**/target/\n**/*.jar\n**/*.war\n**/*.nar\n.mvn/wrapper/maven-wrapper.jar\n.mvn/cache/\n**/src/main/**/target/\n**/src/test/**/target/\n\n# Maven Wrapper\nmvnw\nmvnw.cmd\n\n# Spring Boot\n*.pid\n\n# Logs\n*.log\nlogs/\n\n# IDE\n.vscode/\n.idea/\n*.iml\n*.iws\n*.ipr\n.project\n.classpath\n.settings/\n.springBeans\n.sts4-cache\n\n# NetBeans\n**/nbproject/private/\n**/nbbuild/\n**/dist/\n**/nbdist/\n**/.nb-gradle/\nbuild/\n!**/src/main/**/build/\n!**/src/test/**/build/\n\n# OS\n.DS_Store\nThumbs.db\n\n# Database\n*.mvdb\n*.h2.db\n*.trace.db\nmysql-dump.sql\ndb/\n\n# Environment\n.env\n*.properties\n!**/src/**/application.properties\n\n# Lombok\ndc.lombok\n\n# Dependency directories\nnode_modules/\n
+target/
+*.jar
+*.log
