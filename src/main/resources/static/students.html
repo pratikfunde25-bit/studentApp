@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Students | StudentHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="bootStudentsPage()">
+  <nav class="topbar">
+    <a class="brand" href="dashboard.html">StudentHub</a>
+    <div class="nav-links">
+      <a href="dashboard.html">Dashboard</a>
+      <a class="active" href="students.html">Students</a>
+      <span id="userBadge" class="user-badge"></span>
+      <button type="button" onclick="logout()">Logout</button>
+    </div>
+  </nav>
+
+  <main class="page-shell">
+    <div id="appMessage" class="alert app-alert d-none"></div>
+
+    <section class="page-heading">
+      <div>
+        <p class="eyebrow">Records</p>
+        <h1>Student directory</h1>
+        <p class="muted">Capture complete records with strong validation and safer update flows.</p>
+      </div>
+      <input id="searchInput" class="form-control search-box" placeholder="Search by name, course, email, or enrollment number" oninput="loadStudents()">
+    </section>
+
+    <section class="panel">
+      <div class="panel-heading">
+        <div>
+          <h2>Student Form</h2>
+          <p>Add or update a student record</p>
+        </div>
+      </div>
+
+      <form id="studentForm" class="student-form" onsubmit="saveStudent(event)" novalidate>
+        <input id="studentId" type="hidden">
+
+        <div>
+          <label class="form-label" for="fullName">Full Name</label>
+          <input id="fullName" class="form-control" placeholder="Asha Mehta" maxlength="80" required>
+        </div>
+        <div>
+          <label class="form-label" for="email">Email</label>
+          <input id="email" type="email" class="form-control" placeholder="asha@example.com" maxlength="120" required>
+        </div>
+        <div>
+          <label class="form-label" for="course">Course</label>
+          <input id="course" class="form-control" placeholder="Spring Boot Development" maxlength="80" required>
+        </div>
+        <div>
+          <label class="form-label" for="enrollmentNumber">Enrollment Number</label>
+          <input id="enrollmentNumber" class="form-control" placeholder="STD-2026-001" maxlength="30" required>
+        </div>
+        <div>
+          <label class="form-label" for="age">Age</label>
+          <input id="age" type="number" min="16" max="100" class="form-control" placeholder="21" required>
+        </div>
+        <div>
+          <label class="form-label" for="phoneNumber">Phone Number</label>
+          <input id="phoneNumber" class="form-control" placeholder="9876543210" maxlength="10" required>
+        </div>
+
+        <div class="form-actions wide-actions">
+          <button id="saveButton" class="btn btn-primary" type="submit">Add Student</button>
+          <button id="cancelButton" class="btn btn-outline-secondary d-none" type="button" onclick="resetForm()">Cancel</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel table-panel">
+      <div class="panel-heading">
+        <div>
+          <h2>Student Records</h2>
+          <p>Search, review, and maintain your directory</p>
+        </div>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table align-middle">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Student</th>
+              <th>Course</th>
+              <th>Contact</th>
+              <th>Age</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="studentTable"></tbody>
+        </table>
+      </div>
+      <p id="emptyState" class="empty-state d-none">No students found for the current search.</p>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

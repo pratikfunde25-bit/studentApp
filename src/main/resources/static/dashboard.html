@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | StudentHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body onload="bootDashboardPage()">
+  <nav class="topbar">
+    <a class="brand" href="dashboard.html">StudentHub</a>
+    <div class="nav-links">
+      <a class="active" href="dashboard.html">Dashboard</a>
+      <a href="students.html">Students</a>
+      <span id="userBadge" class="user-badge"></span>
+      <button type="button" onclick="logout()">Logout</button>
+    </div>
+  </nav>
+
+  <main class="page-shell">
+    <div id="appMessage" class="alert app-alert d-none"></div>
+
+    <section class="hero-panel">
+      <div>
+        <p class="eyebrow">Overview</p>
+        <h1>Academic operations dashboard</h1>
+        <p class="hero-copy">Track student activity, course demand, and record quality from one polished workspace.</p>
+      </div>
+      <div class="hero-actions">
+        <a class="btn btn-light btn-lg" href="students.html">Manage Students</a>
+      </div>
+    </section>
+
+    <section class="stats-grid">
+      <article class="stat-card">
+        <span>Total Students</span>
+        <strong id="totalStudents">0</strong>
+        <small>Registered learners in the system</small>
+      </article>
+      <article class="stat-card">
+        <span>Active Courses</span>
+        <strong id="totalCourses">0</strong>
+        <small>Unique academic programs tracked</small>
+      </article>
+      <article class="stat-card">
+        <span>Average Age</span>
+        <strong id="averageAge">0</strong>
+        <small>Average learner age across records</small>
+      </article>
+      <article class="stat-card accent-card">
+        <span>Latest Enrollment</span>
+        <strong id="latestStudent">No students yet</strong>
+        <small id="latestCourse">Add your first student to begin</small>
+      </article>
+    </section>
+
+    <section class="content-grid">
+      <article class="panel chart-panel">
+        <div class="panel-heading">
+          <div>
+            <h2>Course Distribution</h2>
+            <p>Visual comparison of current enrollments</p>
+          </div>
+        </div>
+        <div class="chart-shell">
+          <canvas id="studentChart"></canvas>
+        </div>
+      </article>
+
+      <article class="panel summary-panel">
+        <div class="panel-heading">
+          <div>
+            <h2>Course Summary</h2>
+            <p>Top-performing courses by enrollment</p>
+          </div>
+        </div>
+        <ul id="courseList" class="course-list"></ul>
+      </article>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

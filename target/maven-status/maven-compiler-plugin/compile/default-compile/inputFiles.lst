@@ -1,0 +1,16 @@
+C:\Users\Pratik\Desktop\studentapp\src\main\java\com\example\studentapp\config\SecurityConfig.java
+C:\Users\Pratik\Desktop\studentapp\src\main\java\com\example\studentapp\controller\AuthController.java
+C:\Users\Pratik\Desktop\studentapp\src\main\java\com\example\studentapp\controller\StudentController.java
+C:\Users\Pratik\Desktop\studentapp\src\main\java\com\example\studentapp\dto\AuthRequest.java
+C:\Users\Pratik\Desktop\studentapp\src\main\java\com\example\studentapp\dto\AuthResponse.java
+C:\Users\Pratik\Desktop\studentapp\src\main\java\com\example\studentapp\dto\DashboardSummaryResponse.java
+C:\Users\Pratik\Desktop\studentapp\src\main\java\com\example\studentapp\dto\ErrorResponse.java
+C:\Users\Pratik\Desktop\studentapp\src\main\java\com\example\studentapp\dto\StudentRequest.java
+C:\Users\Pratik\Desktop\studentapp\src\main\java\com\example\studentapp\dto\StudentResponse.java
+C:\Users\Pratik\Desktop\studentapp\src\main\java\com\example\studentapp\exception\DuplicateResourceException.java
+C:\Users\Pratik\Desktop\studentapp\src\main\java\com\example\studentapp\exception\GlobalExceptionHandler.java
+C:\Users\Pratik\Desktop\studentapp\src\main\java\com\example\studentapp\exception\ResourceNotFoundException.java
+C:\Users\Pratik\Desktop\studentapp\src\main\java\com\example\studentapp\model\Student.java
+C:\Users\Pratik\Desktop\studentapp\src\main\java\com\example\studentapp\repository\StudentRepository.java
+C:\Users\Pratik\Desktop\studentapp\src\main\java\com\example\studentapp\service\StudentService.java
+C:\Users\Pratik\Desktop\studentapp\src\main\java\com\example\studentapp\StudentappApplication.java
